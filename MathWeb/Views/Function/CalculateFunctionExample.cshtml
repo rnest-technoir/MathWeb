@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewData["Title"] = "Calculate Function Example";
+}
+
+<div class="header-box">
+    <h3>
+        <i class="fas fa-drafting-compass"></i>
+        Wykres funkcji - wizualizacja danych matematycznych
+    </h3>
+</div>
+
+<div id="calculateFunctionExample" class="main-stage-box" ng-app="calculateFunctionExampleModule" ng-controller="calculateFunctionExampleCtrl" >
+
+    <div id="target"></div>
+
+    <div class="legend-box">
+
+        <div class="operation-box">
+            <h4 style="font-weight:600">Funkcja:&nbsp; </h4>
+
+
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+               <mi>f</mi>
+                <mfenced>
+                    <mi>x</mi>
+                </mfenced>
+                <mo>=</mo>
+                <mfrac>
+                    <mrow>
+                        <msup>
+                            <mi>x</mi>
+                            <mn>4</mn>
+                        </msup>
+                        <mo>+</mo>
+                        <mn>3</mn>
+                        <msup>
+                            <mi>x</mi>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>-</mo>
+                        <mn>4</mn>
+                    </mrow>
+                    <mrow>
+                        <mn>16</mn>
+                        <mo>-</mo>
+                        <msup>
+                            <mi>x</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </mrow>
+                </mfrac>
+            </math>
+
+
+        </div>
+
+        <div class="operation-box">
+            <h4 style="font-weight:600">Dziedzina funkcji:&nbsp; </h4>
+
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+
+                <mn>&DD;</mn>
+                <mo>=</mo>
+                <mi>R</mi>
+                <mo>\</mo>
+                <mo>{</mo>
+                <mo>-</mo>
+                <mn>4</mn>
+                <mo>,</mo>
+                <mn>4</mn>
+                <mo>}</mo>
+
+            </math>
+
+        </div>
+
+        <div class="operation-box">
+            <h4>Dodaj punkt</h4>
+        </div>
+
+
+        <div class="operation-box">
+
+            <div id="x-box" ng-controller="handleDomainList">
+
+                <input ng-model="number" name="x-input" id="x-input" />
+            </div>
+
+            <div id="domain-btn-box" ng-controller="handleDomainList">
+                <button ng-click="addToDomain()" id="add">
+                    <i class="far fa-plus-square"></i>
+                </button>
+                <button ng-click="removeFromDomain()" id="remove">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="operation-box">
+            <h4>Wybrane atrybuty: </h4>
+        </div>
+
+        <div class="operation-box">
+            <div id="domain-box">
+
+            </div>
+        </div>
+
+
+        <div class="operation-box">
+            <h4>Wyniki:</h4>
+        </div>
+
+        <div class="operation-box">
+            <div id="xy-box">
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</div>
+
+@section scripts{
+    <script src="~/lib/d3/calculatefunction.js"></script>
+    <script src="~/lib/ng/calculateFunctionExampleCtrl.js"></script>
+}

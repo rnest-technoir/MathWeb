@@ -1,0 +1,136 @@
+﻿
+*{
+    box-sizing:content-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    color: #2681c6;
+}
+
+button {
+    background-color: rgba(38, 129, 198, 0.50);
+}
+
+.left-menu-box{
+
+}
+
+.main-content-box{
+    display:flex;
+    align-content:center;
+    align-items:center;
+    background-color:rgba(38, 129, 198, 0.40);
+    flex-direction:column;
+    padding: 0 10%;
+}
+
+.menu-header {
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.main-menu {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+a.menu-link{
+
+}
+
+.header-box{
+    font-size:4em;
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+    width:100%;
+    margin-top:1em;
+}
+
+.main-stage-box {
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    justify-content:space-between;
+    background-color:#fff;
+    width:90%;
+    margin:5%;
+    padding:1em;
+}
+
+    .main-stage-box input {
+        border: none;
+        -webkit-box-shadow: 0 0 0px 2px rgba(38, 129, 198, 0.35);
+        box-shadow: 0 0 0 2px rgba(38, 129, 198, 0.35);
+        margin-right: 0.2em;
+        color:rgba(38, 129, 198, 0.45);
+        padding: 0 0.5em;
+    }
+
+.single-bar{
+    margin-top:5px;
+    background-color:#2681c6;
+    color:wheat;
+    text-align:right;
+    padding:2px 4px;
+}
+
+#target{
+    padding:2em;
+    overflow:visible;
+    background-color:rgba(38, 129, 198, 0.15);
+}
+
+.legend-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(38, 129, 198, 0.15);
+    height: 100%;
+}
+
+.operation-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    padding: 0.3em 1em;
+    width:100%;
+    margin-bottom:0.5em;
+}
+
+.operation-box button{
+    margin-left:0.2em;
+}
+
+svg{
+    
+    overflow:visible;
+}
+
+g.tick line:not(.redline) {
+    opacity: 0.3;
+    stroke: #31667a !important;
+}
+
+g.tick text {
+    opacity: 0.6;
+    stroke: #31667a !important;
+}
+
+path.domain{
+    stroke:none !important;
+    fill:none;
+    opacity:0;
+}
